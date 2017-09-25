@@ -1,9 +1,4 @@
-from mtgsdk import Card
-from mtgsdk import Set
-from mtgsdk import Type
-from mtgsdk import Supertype
-from mtgsdk import Subtype
-from mtgsdk import Changelog
+from mtgsdk import Card, Set, Type, Supertype, Subtype, Changelog
 import matplotlib.pyplot as plt
 from urllib.request import urlopen
 
@@ -22,7 +17,7 @@ ktk_booster = Set.generate_booster('ktk')
 # Print name and rarity from cards in booster
 for card in ktk_booster:
 	print("Name: %s" % card.name)
-	print("\tRarity: %s" % card.rarity)
+	print("\tRarity: %s\n" % card.rarity)
 
 
 # Open image from url
