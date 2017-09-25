@@ -27,3 +27,17 @@ a = plt.imread(f)
 # Plot card image
 plt.imshow(a)
 plt.show()
+
+# Plot all cards in booster (extremely slow :s)
+f, axarr = plt.subplots(4, 4)
+axes = [axarr[j][i] for j in range(len(axarr)) for i in range(len(axarr[j]))]
+
+for card, ax in zip(ktk_booster, axes[:-1]):
+	# Open image from url
+	img = urlopen(card.image_url)
+	# Load image from url
+	a = plt.imread(img)
+	ax.imshow(a)
+	ax.set_axis_off()
+
+plt.show()
